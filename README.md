@@ -2,6 +2,12 @@
 
 Train an IDS classifier on **known** attack classes, then build a separate **OOD (out-of-distribution) scorer** — energy-based and Mahalanobis distance in the penultimate-layer embedding space — that flags inputs which don't resemble any known-class distribution. A held-out attack class (`data-exfiltration`) plays the role of a zero-day at test time.
 
+## 🌐 Live demo
+
+**https://zero-day-ood-detection.vercel.app** — live results dashboard: real metrics from `results/metrics.md` plus charts from `results/figures/` (AI Shield dark theme, no model executed server-side).
+
+Interactive **local** demo (Streamlit): `streamlit run demo/app.py` — see [demo/README.md](demo/README.md).
+
 ## Threat Model
 
 **What we defend against:** a *zero-day style unknown attack* — an intrusion technique that was never present in the training data. A supervised IDS has no label for it, so it will happily classify the malicious traffic into one of the known classes (e.g. call an exfiltration campaign "malware-c2"). The defense is not to detect the specific attack (impossible a priori) but to detect that the input **does not fit any known-class distribution**, triggering "unknown / escalate to analyst" instead of a confident (wrong) label.
