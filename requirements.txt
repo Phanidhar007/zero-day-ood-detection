@@ -1,0 +1,11 @@
+numpy>=1.26
+scikit-learn>=1.3
+matplotlib>=3.7
+torch>=2.0
+pandas>=2.0
+streamlit>=1.30
+jupyter>=1.0
+
+# Optional / heavy deps (NOT required - the repo runs fully without them):
+# pytorch-ood>=0.1.5   # production OOD toolkit; here energy/Mahalanobis OOD
+#                       # scorers are implemented manually (see src/zood/ood.py)

@@ -1,0 +1,52 @@
+{
+  "setup": {
+    "n_samples": 5000,
+    "n_features": 18,
+    "n_known": 4,
+    "epochs": 40,
+    "batch_size": 128,
+    "lr": 0.001,
+    "shrink": 0.1,
+    "test_frac": 0.35
+  },
+  "classifier": {
+    "acc": 0.9858870967741935,
+    "f1": 0.9856799731916699,
+    "per_class": {
+      "benign": 0.9871794871794872,
+      "portscan": 0.9961389961389961,
+      "brute-force": 0.9813432835820896,
+      "malware-c2": 0.9768339768339769
+    }
+  },
+  "tpr_target": 0.95,
+  "energy": {
+    "auroc": 0.9364659498207886,
+    "tpr_target": 0.95,
+    "threshold": -0.9048500356859562,
+    "benign_fpr": 0.0,
+    "known_fpr": 0.0,
+    "mean_known": -7.806950159551401,
+    "mean_unknown": -3.2056967062780988,
+    "separation": 4.601253453273302,
+    "separation_std": 1.912195146509874
+  },
+  "mahalanobis": {
+    "auroc": 0.8759596774193548,
+    "tpr_target": 0.95,
+    "threshold": 7.135257645380055,
+    "benign_fpr": 0.007122507122507123,
+    "known_fpr": 0.031806615776081425,
+    "mean_known": 3.8810336183197154,
+    "mean_unknown": 5.651781836238324,
+    "separation": 1.7707482179186083,
+    "separation_std": 0.9110478081778947
+  },
+  "samples_npz": "ood_scores.npz",
+  "figures": [
+    "auroc_curve.png",
+    "embeddings_scatter.png",
+    "fpr_chart.png",
+    "ood_histogram.png"
+  ]
+}
