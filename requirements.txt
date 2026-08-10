@@ -9,3 +9,4 @@ jupyter>=1.0
 # Optional / heavy deps (NOT required - the repo runs fully without them):
 # pytorch-ood>=0.1.5   # production OOD toolkit; here energy/Mahalanobis OOD
 #                       # scorers are implemented manually (see src/zood/ood.py)
+flask>=3.0
