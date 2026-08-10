@@ -11,3 +11,5 @@ venv/
 # trained models / checkpoints
 models/
 checkpoints/
+
+.vercel
